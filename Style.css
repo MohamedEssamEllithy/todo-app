@@ -1,0 +1,329 @@
+@font-face{
+    font-family: myfont;
+    src:url(atwriter.ttf)
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  background-image: url("black-white-photo-surface-with-multiple-triangles.jpg");
+   
+
+  /* Center the image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  /* width: 500px; */
+  margin: 90px 35px;
+box-shadow: 0px 5px 25px 10px #68686874;
+padding: 2%;
+border-radius: 2%;
+width: 35%;
+height: 400px;
+ overflow-y: scroll;
+scroll-behavior: smooth;
+}
+@media(max-width:800px){
+    .container{
+        width: 77%;
+        height: 75%;
+    }
+    ::-webkit-scrollbar {
+        width: 0px;
+        margin: 13% 0;
+    }
+    /* .form{
+    } */
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background:#edf1f291; 
+    border-radius: 10px;
+    margin: 5px 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #43d7f843 ; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background:  #99e6f4b0; 
+}
+
+
+.form {
+    background-color: #43d7f843;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+.input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    flex: 1;
+}
+.input:focus {
+    outline: none;
+}
+.add,
+.completed,
+.all,
+.active,
+.clear-done {
+    border: none;
+    background-color: #36bef4;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.social-icons i:hover{
+color: #36bef4;
+}
+.social-icons a{
+    color: white;
+}
+.add:hover,
+.completed:hover,
+.all:hover,
+.active:hover,
+.clear-done:hover
+{
+    background-color: #36bef432;
+}
+.clear-done {
+    margin-left: 20%;
+}
+.tasks {
+    background-color: #43d7f843;
+    margin-top: 20px;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.tasks .task {
+    background-color: white;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+.tasks .task:not(:last-child) {
+  margin-bottom: 15px;
+}
+.tasks .task:hover {
+  background-color: #f7f7f792;
+}
+.tasks .task.done {
+  opacity: 0.5;
+}
+.tasks .task span {
+  font-weight: bold;
+  font-size: 10px;
+  background-color: #36bef4;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#pag {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-image: linear-gradient(145deg ,white,#b0aeae);
+  z-index: 5000;
+}
+
+.Haybtn {
+  
+  border: none;
+  background-color: #36bef4;
+  color: white;
+  padding: 10px 90px;
+  border-radius: 10px;
+  cursor: pointer;
+ 
+}
+.Haybtn:hover{
+  background-color: #36bef432;
+}
+
+
+.image {
+  /* Add background img */
+  background-image: url("black-white-photo-surface-with-multiple-triangles.jpg");
+
+  /* Use filter to add blur effect */
+  filter: blur(4px);
+  
+  height: 100%;
+
+  /* Center the image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 50;
+}
+
+/* Style the text */
+.text {
+  background-color: rgba(252, 249, 249, 0.127); /* Black partially transparent background */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  
+  
+}
+/* Start Footer */
+.footer {
+  /* padding-top: calc(var(--section-padding) / 2);
+  padding-bottom: calc(var(--section-padding) / 2); */
+  background-image: url("");
+  background-size: cover;
+  position: sticky;
+  color: white;
+  text-align: center;
+  bottom: 10px;
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 70%);
+}
+.footer .container1 {
+  position: fixed;
+    bottom: 5px;
+    left: 40%;
+}
+.footer img {
+  margin-bottom: 0px;
+}
+.footer p:not(.copyright) {
+  text-transform: uppercase;
+  padding: 10px;
+  border-bottom: 1px solid white;
+  font-size: 22px;
+  width: fit-content;
+  margin: 0px auto;
+}
+.footer .social-icons i {
+  padding: 10px 15px;
+}
+.footer .copyright {
+  margin-top: 20px;
+}
+.footer .copyright span {
+  font-weight: bold;
+  color: var(--main-color);
+}
+/* End Footer */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bid-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    /* background-color: chocolate; */
+    
+} 
+.container2 {
+    
+    font-family: montserrat;
+	width: 450px;
+	height: 450px;
+}
+.header2 {
+    text-align: center;
+	margin-bottom: 15px;
+}
+.header2 h2 {
+    font-weight: 400;
+    color: #fff;
+}
+.main-content {
+    width: 80%;
+	height: 400px;
+	padding: 50px 40px;
+	background-color: #ffffff59;
+	border-radius: 10% 30% 50% 70%;
+	box-shadow: 0 25px 31px 0 rgba(0,0,0,0.5);
+    
+}
+
+.text-area {
+    text-align: center;
+	font-size: 25px;
+	color: #262626;
+	line-height: 1.5;
+    
+}
+.text-area .icon {
+    margin-right: 5px;
+}
+.main-content .writer {
+    text-transform: uppercase;
+	letter-spacing: 5px;
+	color: rgb(0, 208, 255);
+	text-align: center;
+	margin-top: 20px;
+	font-size: 25px;
+	
+}
+.main-content .button-area {
+	display: grid;
+	place-items: center;
+	margin-top: 20px;
+	padding: 10px 0;
+}
+.button-area .btn button {
+    background-color: #262626;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    
+}
+.button-area button:active {
+    background-color: deepskyblue;
+}
